@@ -1,0 +1,153 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #888;
+  justify-content: center;
+  border-radius: 25px;
+  max-width: 30%;
+  min-width: 330px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+  .close-img {
+    fill: black;
+    opacity: 1;
+  }
+  .time-check {
+    margin-top: 50px;
+    width: 100%;
+    .time-breaks {
+      font-size: 12px;
+      color: $primary-bg;
+      display: flex;
+      margin-top: 15px;
+      justify-content: space-evenly;
+      input {
+        background-color: $mgray;
+        border: none;
+        border-radius: 10px;
+        min-width: 90%;
+        width: 60%;
+        height: 48px;
+        padding-left: 15px;
+        margin-top: 10px;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .break-pomodoro,
+      .break-long,
+      .break-short {
+        position: relative;
+      }
+    }
+  }
+}
+
+.arrow-up {
+  position: absolute;
+  right: 20%;
+  top: 46%;
+  transform: rotate(180deg);
+}
+
+.arrow-down {
+  position: absolute;
+  right: 20%;
+  top: 76%;
+}
+
+.font-check {
+  margin-top: 40px;
+  margin-right: 15 px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .fonts {
+    display: flex;
+  }
+  .circle {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $mgray;
+  }
+  .f-active {
+    color: $mwhite;
+    background-color: $secondary-bg;
+  }
+}
+
+.color-check {
+  margin: 40px 0px;
+  margin-right: 15 px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .colors {
+    display: flex;
+  }
+}
+.c-active {
+  background-image: url("/assets/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.ap-button {
+  border-radius: 26px;
+  border: none;
+  color: $mwhite;
+  background-color: $primary;
+  padding: 15px 40px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.apply-button {
+  margin-bottom: -55px;
+}
+
+.cross:hover,
+.circle:hover,
+.ap-button:hover,
+.arrow-down:hover,
+.arrow-up:hover {
+  cursor: pointer;
+}

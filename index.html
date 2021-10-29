@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./css/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,11 +11,175 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Pomodoro app</title>
   </head>
-  <body>
-    pomodoro short break long break start pause restart Settings Time (minutes)
-    pomodoro short break long break Font Color Apply
+  <body class="p-body">
+    <div class="main-container">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="modal-head">
+            <h2>Settings</h2>
+            <div class="cross">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                <path
+                  class="close-img"
+                  fill="currentColor()"
+                  fill-rule="evenodd"
+                  d="M11.95.636l1.414 1.414L8.414 7l4.95 4.95-1.414 1.414L7 8.414l-4.95 4.95L.636 11.95 5.586 7 .636 2.05 2.05.636 7 5.586l4.95-4.95z"
+                  opacity=".5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="time-check">
+            <h3>TIME(MINUTES)</h3>
+            <div class="time-breaks">
+              <div class="break-pomodoro">
+                pomodro
+                <div class="pomodoro">
+                  <input type="number" value="25" />
+                  <svg
+                    class="arrow-up"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="7"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#1E213F"
+                      stroke-opacity=".25"
+                      stroke-width="2"
+                      d="M1 1l6 4 6-4"
+                    />
+                  </svg>
+                  <svg
+                    class="arrow-down"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="7"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#1E213F"
+                      stroke-opacity=".25"
+                      stroke-width="2"
+                      d="M1 1l6 4 6-4"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="break-short">
+                short break
+                <div class="short">
+                  <input type="number" value="5" /><svg
+                    class="arrow-up"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="7"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#1E213F"
+                      stroke-opacity=".25"
+                      stroke-width="2"
+                      d="M1 1l6 4 6-4"
+                    />
+                  </svg>
+                  <svg
+                    class="arrow-down"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="7"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#1E213F"
+                      stroke-opacity=".25"
+                      stroke-width="2"
+                      d="M1 1l6 4 6-4"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="break-long">
+                long break
+                <div class="long">
+                  <input type="number" value="15" /><svg
+                    class="arrow-up"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="7"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#1E213F"
+                      stroke-opacity=".25"
+                      stroke-width="2"
+                      d="M1 1l6 4 6-4"
+                    />
+                  </svg>
+                  <svg
+                    class="arrow-down"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="7"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#1E213F"
+                      stroke-opacity=".25"
+                      stroke-width="2"
+                      d="M1 1l6 4 6-4"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="font-check">
+            <h3>FONT</h3>
+            <div class="fonts">
+              <div class="circle p-body f-active">Aa</div>
+              <div class="circle s-body">Aa</div>
+              <div class="circle t-body">Aa</div>
+            </div>
+          </div>
+          <div class="color-check">
+            <h3>COLOR</h3>
+            <div class="colors">
+              <div class="circle p-color"><div class="c-active"></div></div>
+              <div class="circle s-color"><div></div></div>
+              <div class="circle t-color"><div></div></div>
+            </div>
+          </div>
+          <div class="apply-button">
+            <button class="ap-button">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

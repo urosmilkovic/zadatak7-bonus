@@ -9,36 +9,3 @@
 .t-body {
   font-family: "Space Mono", monospace;
 }
-
-.p-color {
-  margin-left: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: $primary;
-}
-
-.s-color {
-  margin-left: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: $secondary;
-}
-
-.t-color {
-  margin-left: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: $tertiary;
-}

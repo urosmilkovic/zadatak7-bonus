@@ -11,7 +11,7 @@
   }
   .timer-options {
     display: flex;
-    width: 70%;
+    width: min-content;
     justify-content: space-around;
     text-align: center;
     align-items: center;
@@ -24,7 +24,6 @@
     opacity: 0.9;
     @include sm {
       font-size: 10px;
-      width: 100%;
     }
   }
   .setting {
@@ -48,8 +47,6 @@
   cursor: pointer;
 }
 .active-timer {
-  width: 30%;
-  padding: 15px 0px;
   border-radius: 26px;
   color: $secondary-bg;
   .p-theme & {
@@ -87,7 +84,7 @@
   border: 1px solid #888;
   justify-content: center;
   border-radius: 25px;
-  max-width: 45%;
+  max-width: 30%;
   min-width: 350px;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -331,6 +328,10 @@
 }
 
 .timer {
-  width: 100%;
+  padding: 15px 30px;
   cursor: pointer;
+  white-space: nowrap;
+  @include sm {
+    padding: 10px 15px;
+  }
 }

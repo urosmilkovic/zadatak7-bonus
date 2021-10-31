@@ -1,0 +1,337 @@
+.main-container {
+  width: 65%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  .header-logo {
+    color: white;
+  }
+  .timer-options {
+    display: flex;
+    width: min-content;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: $secondary-bg;
+    border-radius: 32px;
+    padding: 10px;
+    font-weight: bold;
+    color: $fc;
+    opacity: 0.9;
+    @include sm {
+      font-size: 10px;
+    }
+  }
+  .setting {
+    margin-top: 20px;
+    svg {
+      cursor: pointer;
+    }
+  }
+  .setting svg:hover {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition-duration: 800ms;
+  }
+}
+
+.pomodoro-timer,
+.short-timer,
+.long-timer {
+  width: 30%;
+  cursor: pointer;
+}
+.active-timer {
+  border-radius: 26px;
+  color: $secondary-bg;
+  .p-theme & {
+    background-color: $primary;
+  }
+  .s-theme & {
+    background-color: $secondary;
+  }
+  .t-theme & {
+    background-color: $tertiary;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  &.modal-active {
+    display: block;
+  }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #888;
+  justify-content: center;
+  border-radius: 25px;
+  max-width: 30%;
+  min-width: 350px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+  .close-img {
+    fill: black;
+    opacity: 1;
+  }
+  .time-check {
+    margin-top: 50px;
+    width: 100%;
+    .time-breaks {
+      font-size: 12px;
+      color: $primary-bg;
+      display: flex;
+      margin-top: 15px;
+      justify-content: space-evenly;
+      @include sm {
+        display: block;
+      }
+      input {
+        background-color: $mgray;
+        border: none;
+        border-radius: 10px;
+        min-width: 90%;
+        width: 60%;
+        height: 48px;
+        padding-left: 15px;
+        margin-top: 10px;
+        outline: none;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .break-pomodoro,
+      .break-long,
+      .break-short {
+        @include sm {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        position: relative;
+      }
+    }
+    h4 {
+      @include sm {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.arrow-up {
+  position: absolute;
+  right: 20%;
+  top: 46%;
+  transform: rotate(180deg);
+  user-select: none;
+  @include sm {
+    right: 14%;
+    top: 38%;
+  }
+  &:hover {
+    color: red;
+  }
+}
+
+.arrow-down {
+  position: absolute;
+  right: 20%;
+  top: 76%;
+  user-select: none;
+  @include sm {
+    right: 14%;
+    top: 76%;
+  }
+  &:hover {
+    color: red;
+  }
+}
+
+.font-check {
+  margin-top: 40px;
+  margin-right: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  @include sm {
+    flex-direction: column;
+  }
+  .fonts {
+    display: flex;
+    @include sm {
+      margin-top: 20px;
+    }
+  }
+  .circle {
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $mgray;
+  }
+  .f-active {
+    color: $mwhite;
+    background-color: $secondary-bg;
+  }
+  h3 {
+    @include sm {
+      font-size: 12px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.color-check {
+  margin: 40px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  @include sm {
+    flex-direction: column;
+  }
+  .colors {
+    display: flex;
+    @include sm {
+      margin-top: 20px;
+    }
+  }
+  h3 {
+    @include sm {
+      font-size: 12px;
+    }
+  }
+}
+.c-active {
+  background-image: url("/assets/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.ap-button {
+  border-radius: 26px;
+  border: none;
+  color: $mwhite;
+  padding: 15px 40px;
+  margin: 0px auto;
+  display: block;
+  .p-theme & {
+    background-color: $primary;
+  }
+  .s-theme & {
+    background-color: $secondary;
+  }
+  .t-theme & {
+    background-color: $tertiary;
+  }
+}
+
+.p-color {
+  margin-left: 15px;
+  @include sm {
+    margin-left: 0px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $primary;
+}
+
+.s-color {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $secondary;
+}
+
+.t-color {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $tertiary;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.apply-button {
+  margin-bottom: -55px;
+}
+
+.cross:hover,
+.circle:hover,
+.ap-button:hover,
+.arrow-down:hover,
+.arrow-up:hover {
+  cursor: pointer;
+}
+
+.ap-button:hover {
+  border-radius: 26px;
+  border: none;
+  color: $mwhite;
+  .p-theme & {
+    background-color: darken($primary, 10);
+  }
+  .s-theme & {
+    background-color: darken($secondary, 10);
+  }
+  .t-theme & {
+    background-color: darken($tertiary, 10);
+  }
+}
+
+.timer {
+  padding: 15px 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  @include sm {
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,81 @@
+.stopwatch {
+  width: 410px;
+  height: 410px;
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include sm {
+    transform: scale(0.8);
+  }
+}
+
+.base-timer {
+  width: 390px;
+  height: 390px;
+  border: solid 10px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient($secondary-bg, $primary-bg),
+    radial-gradient(circle at top left, $secondary-bg, $primary-bg);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+  overflow: hidden;
+}
+
+.base-timer__circle {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.time-progres {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  z-index: 0;
+  .p-theme & {
+    stroke: $primary;
+  }
+  .s-theme & {
+    stroke: $secondary;
+  }
+  .t-theme & {
+    stroke: $tertiary;
+  }
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-dasharray: 0 9999;
+  circle {
+    fill: none;
+  }
+}
+
+.time {
+  text-align: center;
+  color: $fc;
+  h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.pointer:hover {
+  cursor: pointer;
+  .p-theme & {
+    color: $primary;
+  }
+  .s-theme & {
+    color: $secondary;
+  }
+  .t-theme & {
+    color: $tertiary;
+  }
+}
